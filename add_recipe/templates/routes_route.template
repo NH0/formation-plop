@@ -1,0 +1,2 @@
+{/* Add routes below */}
+            <Route exact path='/recipes/{{name}}' component={Recipe{{name}} } />

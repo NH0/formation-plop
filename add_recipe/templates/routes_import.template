@@ -1,0 +1,2 @@
+// Add pages import below //
+import { Recipe{{name}} } from './pages/{{name}}';
