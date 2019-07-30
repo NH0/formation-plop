@@ -1,0 +1,2 @@
+{/* PLOP: Add recipe links below -- DO NOT ERASE */}
+          <Link to='/recipes/{{name}}'>{{name}}</Link>

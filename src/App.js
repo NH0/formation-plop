@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter } from 'react-router-dom';
+import {BrowserRouter, Link } from 'react-router-dom';
 import { Routes } from './routes';
 import logo from './logo.svg';
 import './App.css';
@@ -18,6 +18,7 @@ function App() {
       <div className="App-body">
         <div className="Menu">
           Recipes
+          {/* PLOP: Add recipe links below -- DO NOT ERASE */}
         </div>
         <div className="Recipe">
             <Routes />

@@ -1,2 +1,2 @@
-// Add pages import below //
+// PLOP: Add pages import below -- DO NOT ERASE //
 import { Recipe{{name}} } from './pages/{{name}}';
