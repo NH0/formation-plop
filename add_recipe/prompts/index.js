@@ -7,8 +7,8 @@ const getRecipe = () => [
         name: 'name',
         message: 'Enter your recipe name:',
     },
-    ...getIngredients(),
-    ...getSteps()
+    getIngredients(),
+    getSteps()
 ];
 
 module.exports = {

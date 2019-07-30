@@ -7,16 +7,16 @@ export const Recipe{{name}} = () => {
         <React.Fragment>
             <div className="ingredients">
                 <ul>
-                   <li>{{ingredient1}}</li>
-                   <li>{{ingredient2}}</li>
-                   <li>{{ingredient3}}</li>
+                    {{#each ingredients}}
+                   <li>{{this.ingredient}}</li>
+                   {{/each}}
                 </ul>
             </div>
             <div className="steps">
                 <ol>
-                    <li>{{step1}}</li>
-                    <li>{{step2}}</li>
-                    <li>{{step3}}</li>
+                    {{#each steps}}
+                    <li>{{this.step}}</li>
+                    {{/each}}
                 </ol>
             </div>
         </React.Fragment>
