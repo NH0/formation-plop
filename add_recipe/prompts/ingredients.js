@@ -1,8 +1,26 @@
 const getOneIngredient = () => [
     {
-      type: "input",
+      type: "list",
       name: "ingredient",
-      message: "Quantity and name of ingredient :"
+      message: "Quantity and name of ingredient :",
+      choices: ['Oeufs',
+                'Farine',
+                'Riz',
+                'Pâtes',
+                'Pommes de terre',
+                'Sel/Poivre',
+                'Sucre',
+                'Beurre',
+                'Lait',
+                'Huile d\'olive',
+                'Vinaigre',
+                'Viande hachée',
+                'Tomates',
+                'Basilic',
+                'Carrotes',
+                'Laurier',
+                'Thym',
+            ]
     }
   ];
 
