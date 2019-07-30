@@ -1,6 +1,7 @@
 const { getRecipe } = require('./add_recipe/prompts');
 
 module.exports = function (plop) {
+    plop.setPrompt("recursive", require("inquirer-recursive"));
     plop.setGenerator('basics', {
         description: 'Add new recipe',
         prompts: getRecipe(),

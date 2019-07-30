@@ -1,20 +1,18 @@
-const getSteps = () => [
+const getOneStep = () => [
     {
         type: 'input',
-        name: 'step1',
-        message: 'Enter your step :',
-    },
-    {
-        type: 'input',
-        name: 'step2',
-        message: 'Enter your step :',
-    },
-    {
-        type: 'input',
-        name: 'step3',
+        name: 'step',
         message: 'Enter your step :',
     }
 ];
+
+const getSteps = () => ({
+        type: 'recursive',
+        name: 'steps',
+        message: 'Would you like to add a step ?',
+        default: "y",
+        prompts: getOneStep(),
+});
 
 module.exports = {
     getSteps,

@@ -1,20 +1,18 @@
-const getIngredients = () => [
+const getOneIngredient = () => [
     {
-        type: 'input',
-        name: 'ingredient1',
-        message: 'Quantity and name of ingredient :',
-    },
-    {
-        type: 'input',
-        name: 'ingredient2',
-        message: 'Quantity and name of ingredient :',
-    },
-    {
-        type: 'input',
-        name: 'ingredient3',
-        message: 'Quantity and name of ingredient :',
+      type: "input",
+      name: "ingredient",
+      message: "Quantity and name of ingredient :"
     }
-];
+  ];
+
+const getIngredients = () => ({
+    type: "recursive",
+    name: "ingredients",
+    message: "Would you like to add an ingredient ?",
+    default: "y",
+    prompts: getOneIngredient()
+  });
 
 module.exports = {
     getIngredients,
