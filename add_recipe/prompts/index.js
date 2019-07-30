@@ -1,19 +1,14 @@
+const { getIngredients } = require('./ingredients');
+const { getSteps } = require('./steps');
+
 const getRecipe = () => [
     {
         type: 'input',
         name: 'name',
         message: 'Enter your recipe name:',
     },
-    {
-        type: 'input',
-        name: 'ingredient',
-        message: 'Quantity and name of ingredient :',
-    },
-    {
-        type: 'input',
-        name: 'step',
-        message: 'Enter your step :',
-    }
+    ...getIngredients(),
+    ...getSteps()
 ];
 
 module.exports = {
