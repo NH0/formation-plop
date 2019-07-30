@@ -1,14 +1,12 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-// Add pages import below //
-import { RecipeCrepes } from './pages/Crepes';
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+// PLOP: Add pages import below //
 
 export const Routes = () => {
-    return (
-        <Switch>
-            {/* Add routes below */}
-            <Route exact path='/recipes/Crepes' component={RecipeCrepes } />
-            <Route exact path="/recipes"/>
-        </Switch>
-    );
+  return (
+    <Switch>
+      {/* PLOP: Add routes below */}
+      <Route exact path="/recipes" />
+    </Switch>
+  );
 };
