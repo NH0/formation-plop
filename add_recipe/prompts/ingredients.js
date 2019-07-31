@@ -2,7 +2,7 @@ const getOneIngredient = () => [
   {
     type: "list",
     name: "ingredient",
-    message: "Quantity and name of ingredient :",
+    message: "Name of ingredient :",
     choices: [
       "Eggs",
       "Flour",
@@ -15,13 +15,59 @@ const getOneIngredient = () => [
       "Milk",
       "Olive oil",
       "Vinegar",
-      "Ground meat",
+      "Meat",
       "Tomatoes",
       "Basil",
       "Carrots",
-      "Bay leafs",
+      "Laurier",
       "Thyme"
     ]
+  },
+  {
+    type: "list",
+    name: "unit",
+    message: function(answers) {
+      return "Unit of " + answers.ingredient;
+    },
+    choices: ["L", "cL", "mL", "teaspoon", "tablespoon", "glass"],
+    when: function(answers) {
+      return ["Milk", "Olive oil", "Vinegar"].includes(answers.ingredient);
+    }
+  },
+  {
+    type: "list",
+    name: "unit",
+    message: function(answers) {
+      return "Unit of " + answers.ingredient;
+    },
+    choices: ["kg", "g", "teaspoon", "tablespoon", "No unit"],
+    when: function(answers) {
+      return [
+        "Flour",
+        "Rice",
+        "Pasta",
+        "Potatoes",
+        "Salt and pepper",
+        "Sugar",
+        "Butter",
+        "Meat",
+        "Tomatoes",
+        "Carrots"
+      ].includes(answers.ingredient);
+    }
+  },
+  {
+    type: "input",
+    name: "quantity",
+    message: function(answers) {
+      return "Quantity of " + answers.ingredient;
+    },
+    validate: function(quantity) {
+      if (isNaN(quantity.trim())) {
+        return "You must provide a number !";
+      }
+      return true;
+    }
   }
 ];
 
