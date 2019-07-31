@@ -1,2 +1,2 @@
 // PLOP: Add pages import below -- DO NOT ERASE //
-import { Recipe{{properCase name}} } from './pages/{{properCase name}}';
+import { Recipe{{properCase answers.name}} } from './pages/{{properCase answers.name}}';

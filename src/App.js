@@ -1,29 +1,31 @@
-import React from 'react';
-import {BrowserRouter, Link } from 'react-router-dom';
-import { Routes } from './routes';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Link } from "react-router-dom";
+import { Routes } from "./routes";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <div className="App-header">
-        <img className="Logo" src={logo} alt="logo"/>
+        <img className="Logo" src={logo} alt="logo" />
         <div className="Text">
           Easy recipes
-          <div className="Subtitle">Learn to cook with delicious and simple recipes</div>
+          <div className="Subtitle">
+            Learn to cook with delicious and simple recipes
+          </div>
         </div>
       </div>
       <BrowserRouter>
-      <div className="App-body">
-        <div className="Menu">
-          Recipes
-          {/* PLOP: Add recipe links below -- DO NOT ERASE */}
-        </div>
-        <div className="Recipe">
+        <div className="App-body">
+          <div className="Menu">
+            Recipes
+            {/* PLOP: Add recipe links below -- DO NOT ERASE */}
+          </div>
+          <div className="Recipe">
             <Routes />
+          </div>
         </div>
-      </div>
       </BrowserRouter>
     </div>
   );

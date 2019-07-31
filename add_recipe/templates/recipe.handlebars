@@ -2,19 +2,19 @@ import React from 'react';
 import './recipe.css';
 
 
-export const Recipe{{properCase name}} = () => {
+export const Recipe{{properCase answers.name}} = () => {
     return (
         <React.Fragment>
             <div className="ingredients">
                 <ul>
-                    {{#each ingredients}}
+                    {{#each answers.ingredients}}
                    <li>{{this.quantity}}{{unless isNoUnit this.unit}} {{this.unit}} {{/unless}}{{this.ingredient}}</li>
                    {{/each}}
                 </ul>
             </div>
             <div className="steps">
                 <ol>
-                    {{#each steps}}
+                    {{#each answers.steps}}
                     <li>{{this.step}}</li>
                     {{/each}}
                 </ol>

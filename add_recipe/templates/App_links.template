@@ -1,2 +1,2 @@
 {/* PLOP: Add recipe links below -- DO NOT ERASE */}
-          <Link to='/recipes/{{properCase name}}'>{{deMaGrandMere name}}</Link>
+          <Link to='/recipes/{{properCase answers.name}}'>{{deMaGrandMere answers.name}}</Link>

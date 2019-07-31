@@ -1,6 +1,6 @@
-const { getRecipe } = require('./add_recipe/prompts');
+const { getJSONPrompt } = require('./add_recipe/prompts/json');
 const helpers = require('./add_recipe/helpers');
-const getActions = require('./add_recipe/actions');
+const getJSONActions = require('./add_recipe/actions/json');
 
 module.exports = function (plop) {
     plop.setPrompt("recursive", require("inquirer-recursive"));
@@ -8,7 +8,7 @@ module.exports = function (plop) {
 
     plop.setGenerator('basics', {
         description: 'Add new recipe',
-        prompts: getRecipe(),
-        actions: getActions,
+        prompts: getJSONPrompt(),
+        actions: getJSONActions,
     });
 };

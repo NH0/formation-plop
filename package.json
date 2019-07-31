@@ -16,7 +16,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "add-recipe": "plop"
+    "add-recipe": "plop",
+    "add-friend-recipe": "plop --plopfile plopJSON.js"
   },
   "eslintConfig": {
     "extends": "react-app"
