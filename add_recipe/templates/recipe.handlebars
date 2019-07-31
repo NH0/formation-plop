@@ -8,7 +8,7 @@ export const Recipe{{name}} = () => {
             <div className="ingredients">
                 <ul>
                     {{#each ingredients}}
-                   <li>{{this.ingredient}}</li>
+                   <li>{{this.quantity}} {{this.unit}} {{this.ingredient}}</li>
                    {{/each}}
                 </ul>
             </div>
