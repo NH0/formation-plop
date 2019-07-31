@@ -1,13 +1,16 @@
 const { getRecipe } = require('./add_recipe/prompts');
+const helpers = require('./add_recipe/helpers');
 
 module.exports = function (plop) {
     plop.setPrompt("recursive", require("inquirer-recursive"));
+    helpers.forEach(helper => plop.setHelper(helper.name, helper.helper));
+
     plop.setGenerator('basics', {
         description: 'Add new recipe',
         prompts: getRecipe(),
         actions: [{
             type: 'add',
-            path: 'src/pages/{{name}}.js',
+            path: 'src/pages/{{properCase name}}.js',
             templateFile: './add_recipe/templates/recipe.handlebars'
         },
         {

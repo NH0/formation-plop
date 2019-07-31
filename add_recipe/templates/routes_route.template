@@ -1,2 +1,2 @@
 {/* PLOP: Add routes import below -- DO NOT ERASE */}
-      <Route exact path='/recipes/{{name}}' component={Recipe{{name}} } />
+      <Route exact path='/recipes/{{properCase name}}' component={Recipe{{properCase name}} } />
